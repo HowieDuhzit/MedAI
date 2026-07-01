@@ -1,5 +1,5 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.androidApplication)
 }
 
 android {
@@ -36,10 +36,10 @@ android {
 }
 
 dependencies {
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
+    implementation(libs.androidxCoreKtx)
+    implementation(libs.androidxAppcompat)
     implementation(project(":shared"))
     testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(libs.androidxJunit)
+    androidTestImplementation(libs.androidxEspressoCore)
 }

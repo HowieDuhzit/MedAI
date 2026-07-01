@@ -142,14 +142,13 @@ class ConversationManager(appContext: Context) {
         _state.value = ConversationState.SPEAKING
         ttsPlayer?.speak(text) {
             _state.value = ConversationState.IDLE
-            scheduleNextListening()
         }
     }
 
     private fun scheduleNextListening() {
         scope.launch {
             delay(500)
-            if (_state.value == ConversationState.IDLE || _state.value == ConversationState.ERROR) {
+            if (_state.value == ConversationState.IDLE) {
                 startListening()
             }
         }

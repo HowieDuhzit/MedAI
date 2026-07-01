@@ -1,5 +1,5 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.androidApplication)
 }
 
 android {
@@ -46,24 +46,23 @@ android {
 }
 
 dependencies {
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
+    implementation(libs.androidxCoreKtx)
+    implementation(libs.androidxAppcompat)
     implementation(libs.material)
-    implementation(libs.androidx.activity.ktx)
-    implementation(libs.androidx.constraintlayout)
-    implementation(libs.kotlinx.coroutines.core)
-    implementation(libs.kotlinx.coroutines.android)
-    implementation(libs.lifecycle.runtime)
-    implementation(libs.lifecycle.viewmodel)
-    implementation(libs.lifecycle.viewmodel.ktx)
-    implementation(libs.androidx.activity.ktx)
+    implementation(libs.androidxActivityKtx)
+    implementation(libs.androidxConstraintlayout)
+    implementation(libs.kotlinxCoroutinesCore)
+    implementation(libs.kotlinxCoroutinesAndroid)
+    implementation(libs.lifecycleRuntime)
+    implementation(libs.lifecycleViewmodel)
+    implementation(libs.lifecycleViewmodelKtx)
     implementation(libs.databinding)
     implementation(libs.retrofit)
-    implementation(libs.retrofit.converter.gson)
+    implementation(libs.retrofitConverterGson)
     implementation(libs.okhttp)
-    implementation(libs.okhttp.logging)
+    implementation(libs.okhttpLogging)
     implementation(project(":shared"))
     testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(libs.androidxJunit)
+    androidTestImplementation(libs.androidxEspressoCore)
 }
